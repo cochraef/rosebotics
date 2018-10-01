@@ -25,6 +25,10 @@ class Snatch3rRobot(object):
         self.left_wheel.start_spinning(left_wheel_duty_cycle_percent)
         self.right_wheel.start_spinning(right_wheel_cycle_duty_percent)
 
+    def stop(self, stop_action=StopAction.BRAKE.value):
+        self.left_wheel.stop_spinning(stop_action)
+        self.right_wheel.stop_spinning(stop_action)
+
 
 class Wheel(object):
     def __init__(self, port, default_duty_cycle_percent=100,
