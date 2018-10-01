@@ -1,5 +1,5 @@
 """
-  Capstone Project.  Code written by Jacob Bowman.
+  Capstone Project.  Code written by Jacob Bowman. 
   Fall term, 2018-2019.
 """
 
