@@ -31,7 +31,7 @@ def run_test_go_stop():
 
     time.sleep(2)
 
-    robot.go(1000, 1000)
+    robot.go(100, 100)
     time.sleep(3)
     robot.stop(rb.StopAction.COAST.value)
 
