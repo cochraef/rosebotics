@@ -21,6 +21,10 @@ class Snatch3rRobot(object):
         self.left_wheel = Wheel(left_wheel_port)
         self.right_wheel = Wheel(right_wheel_port)
 
+    def go(self, left_wheel_duty_cycle_percent=100, right_wheel_cycle_duty_percent=100):
+        self.left_wheel.start_spinning(left_wheel_duty_cycle_percent)
+        self.right_wheel.start_spinning(right_wheel_cycle_duty_percent)
+
 
 class Wheel(object):
     def __init__(self, port, default_duty_cycle_percent=100,
