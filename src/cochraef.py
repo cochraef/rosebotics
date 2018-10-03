@@ -5,6 +5,7 @@
 
 import rosebotics as rb
 import time
+import bowmanj1 as b
 
 
 def main():
@@ -15,7 +16,7 @@ def main():
 def run_tests():
     """ Runs various tests. """
     run_test_go_stop()
-    run_test_spin_seconds()
+    run_test_turn()
 
 
 def run_test_go_stop():
@@ -40,24 +41,24 @@ def run_test_go_stop():
     print(robot.left_wheel.get_degrees_spun())
 
 
-def run_test_spin_seconds():
+def run_test_turn():
 
-    print('Test 1: Spinning for 10 seconds at 50% power.')
+    print('Test 1: Turning for 10 seconds at 50% power.')
     print()
-    spin_seconds(10, 50)
+    b.turn(10, 50)
 
-    print('Test 2: Spinning for 4 seconds at 10% power.')
+    print('Test 2: Turning for 4 seconds at 10% power.')
     print()
-    spin_seconds(4, 10)
+    b.turn(4, 10)
 
-    print('Test 3: Spinning for 2 seconds at 100% power.')
+    print('Test 3: Turning for 2 seconds at 100% power.')
     print()
-    spin_seconds(2, 100)
+    b.turn(2, 100)
 
 
 def spin_seconds(n, x):
     """ Causes the robot to spin for N seconds at duty cycle x. """
-    robot = rb.Snatch3rRobot
+    robot = rb.Snatch3rRobot()
 
     robot.go(x, -x)
 
