@@ -57,7 +57,7 @@ def run_test_spin_seconds():
 
 def spin_seconds(n, x):
     """ Causes the robot to spin for N seconds at duty cycle x. """
-    robot = rb.Snatch3rRobot
+    robot = rb.Snatch3rRobot()
 
     robot.go(x, -x)
 
