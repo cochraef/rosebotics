@@ -5,6 +5,7 @@
 
 import rosebotics as rb
 import time
+import cochraef
 
 
 def main():
@@ -15,7 +16,8 @@ def main():
 def run_tests():
     """ Runs various tests. """
     run_test_go_stop()
-    run_test_for_spin_seconds()
+    run_test_spin_seconds()
+
 
 def run_test_go_stop():
     """ Tests the   go   and   stop   Snatch3rRobot methods. """
@@ -39,14 +41,19 @@ def run_test_go_stop():
     print(robot.left_wheel.get_degrees_spun())
 
 
-def run_test_for_spin_seconds():
-    spin_seconds(7, 100)
+def forward(x, seconds):
+    """Robot goes forward for SECONDS with X duty cycle"""
+    robot = rb.Snatch3rRobot
+    robot.go(x, x)
+    beginning = time.time()
+    while True:
+        ending = time.time()
+        if ending - beginning >= seconds:
+            robot.stop(rb.StopAction.BRAKE.value)
 
 
-
-
-
-
+def run_test_spin_seconds():
+    cochraef.py(10, 50)
 
 
 
