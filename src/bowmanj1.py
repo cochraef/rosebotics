@@ -5,6 +5,7 @@
 
 import rosebotics as rb
 import time
+import scottjm1 as jm1
 
 
 def main():
@@ -12,10 +13,12 @@ def main():
     run_tests()
 
 
+
+
 def run_tests():
     """ Runs various tests. """
     run_test_go_stop()
-
+    run_forward_test()
 
 def run_test_go_stop():
     """ Tests the   go   and   stop   Snatch3rRobot methods. """
@@ -38,7 +41,10 @@ def run_test_go_stop():
     print(robot.right_wheel.get_degrees_spun())
     print(robot.left_wheel.get_degrees_spun())
 
+def run_forward_test():
+    jm1.forward(50, 3)
 
+    
 def turn(n, x):
     robot = rb.Snatch3rRobot()
     robot.go(x, 0)
@@ -49,4 +55,6 @@ def turn(n, x):
             robot.stop()
             break
 
-forward(50, 3)
+
+
+main()
