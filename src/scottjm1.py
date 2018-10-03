@@ -16,7 +16,8 @@ def main():
 def run_tests():
     """ Runs various tests. """
     run_test_go_stop()
-    run_test_spin_seconds()
+    #run_test_spin_seconds()
+    #run_forward()
 
 
 def run_test_go_stop():
@@ -50,6 +51,10 @@ def forward(x, seconds):
         ending = time.time()
         if ending - beginning >= seconds:
             robot.stop(rb.StopAction.BRAKE.value)
+
+                       
+def run_forward():
+    forward(50, 7)
 
 
 def run_test_spin_seconds():
