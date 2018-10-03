@@ -5,6 +5,7 @@
 
 import rosebotics as rb
 import time
+import cochraef
 
 
 def main():
@@ -49,8 +50,9 @@ def forward(x, seconds):
         if ending - beginning >= seconds:
             robot.stop(rb.StopAction.BRAKE.value)
 
-def run_test_spin_seconds:
-    
+
+def run_test_spin_seconds():
+    cochraef.py(10, 50)
 
 
 
