@@ -42,6 +42,7 @@ def run_test_go_stop():
 
 
 def run_forward_test():
+
     jm1.forward(50, 3)
 
 
@@ -52,7 +53,7 @@ def turn(n, x):
     while True:
         now = time.time()
         if now - start == n:
-            robot.stop()
+            robot.stop(rb.StopAction.BRAKE.value)
             break
 
 
