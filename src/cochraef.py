@@ -45,7 +45,7 @@ def run_test_turn():
 
     print('Test 1: Turning for 10 seconds at 50% power.')
     print()
-    b.turn(1, 50)
+    b.turn(1, 100)
 
     print('Test 2: Turning for 4 seconds at 10% power.')
     print()
@@ -53,7 +53,7 @@ def run_test_turn():
 
     print('Test 3: Turning for 2 seconds at 100% power.')
     print()
-    b.turn(2, 100)
+    b.turn(2, 50)
 
 
 def spin_seconds(n, x):
