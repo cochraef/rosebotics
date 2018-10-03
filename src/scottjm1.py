@@ -53,7 +53,7 @@ def forward(x, seconds):
 
 
 def run_test_spin_seconds():
-    cochraef.py(10, 50)
+    cochraef.spin_seconds(10, 50)
 
 
 
