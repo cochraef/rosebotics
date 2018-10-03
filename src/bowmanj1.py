@@ -16,7 +16,7 @@ def main():
 def run_tests():
     """ Runs various tests. """
     run_test_go_stop()
-    
+
 
 
 def run_test_go_stop():
@@ -43,7 +43,7 @@ def run_test_go_stop():
 
 def turn(n, x):
     robot = rb.Snatch3rRobot()
-    robot.go(x, 0)
+    robot.go(x, None)
     start = time.time()
     while True:
         now = time.time()
