@@ -16,6 +16,7 @@ def main():
 def run_tests():
     """ Runs various tests. """
     run_test_go_stop()
+    run_test_spin_seconds()
 
 
 def run_test_go_stop():
