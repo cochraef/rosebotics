@@ -5,7 +5,7 @@
 
 import rosebotics as rb
 import time
-import bowmanj1 as b
+import bowmanj1
 
 
 def main():
@@ -45,15 +45,15 @@ def run_test_turn():
 
     print('Test 1: Turning for 10 seconds at 50% power.')
     print()
-    b.turn(1, 100)
+    bowmanj1.turn(1, 100)
 
     print('Test 2: Turning for 4 seconds at 10% power.')
     print()
-    b.turn(4, 10)
+    bowmanj1.turn(4, 10)
 
     print('Test 3: Turning for 2 seconds at 100% power.')
     print()
-    b.turn(2, 50)
+    bowmanj1.turn(2, 50)
 
 
 def spin_seconds(n, x):
