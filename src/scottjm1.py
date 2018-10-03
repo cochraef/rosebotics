@@ -40,6 +40,7 @@ def run_test_go_stop():
 
 
 def forward(x, seconds):
+    """Robot goes forward for SECONDS with X duty cycle"""
     robot = rb.Snatch3rRobot
     robot.go(x, x)
     beginning = time.time()
@@ -47,6 +48,10 @@ def forward(x, seconds):
         ending = time.time()
         if ending - beginning >= seconds:
             robot.stop(rb.StopAction.BRAKE.value)
+
+def run_test_spin_seconds:
+    
+
 
 
 main()
