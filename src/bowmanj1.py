@@ -16,7 +16,7 @@ def main():
 def run_tests():
     """ Runs various tests. """
     run_test_go_stop()
-
+    run_forward_test()
 
 
 def run_test_go_stop():
@@ -39,6 +39,10 @@ def run_test_go_stop():
 
     print(robot.right_wheel.get_degrees_spun())
     print(robot.left_wheel.get_degrees_spun())
+
+
+def run_forward_test():
+    jm1.forward(50, 3)
 
 
 def turn(n, x):
